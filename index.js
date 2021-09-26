@@ -7,10 +7,47 @@
  * If you click on button +, the text will be "+"
  * ,... and so on
  */
+
+let array = [];
+let operation;
+
 function buttonClick(text) {
   console.log("Clicking", text);
-  // Write your code here
+  let numberOne = Number.isInteger(text);
+  let numberTwo = Number.isInteger(text);
+
+  if (numberOne === true) {
+    printOnConsole(text);
+  } else if (numberTwo === true) {
+    printOnConsole(text);
+  } else {
+    printOnConsole(0);
+  }
 }
+
+function Calculate(operation, numberOne, numberTwo) {
+  let result;
+  if (operation === "+") {
+    result = numberOne + numberTwo;
+  } else if (operation === "-") {
+    result = numberOne - numberTwo;
+  } else if (operation === "*") {
+    result = numberOne * numberTwo;
+  } else if (operation === "/") {
+    result = numberOne / numberTwo;
+  } else if (operation === "%") {
+    result = numberOne / 100;
+  } else if (operation === "±") {
+    result = numberOne * -1;
+  } else {
+    result = 0;
+  }
+  printOnConsole(result);
+}
+
+// console.log("Clicking", text);
+// numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+// return numbers.find((number) => number.index === text);
 
 /** Supporting functions
  * 1. `printOnConsole(text)`, takes any text, and renders the console part of the web page
