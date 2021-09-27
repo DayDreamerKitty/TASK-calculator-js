@@ -9,42 +9,49 @@
  */
 
 let array = [];
-let operation;
+let opr;
+let result = 0;
+let number = 0;
 
 function buttonClick(text) {
   console.log("Clicking", text);
-  let numberOne = Number.isInteger(text);
-  let numberTwo = Number.isInteger(text);
-
-  if (numberOne === true) {
-    printOnConsole(text);
-  } else if (numberTwo === true) {
-    printOnConsole(text);
-  } else {
-    printOnConsole(0);
-  }
 }
+//   let numberOne = Number.isInteger(text);
+//   let numberTwo = Number.isInteger(text);
 
-function Calculate(operation, numberOne, numberTwo) {
-  let result;
-  if (operation === "+") {
-    result = numberOne + numberTwo;
-  } else if (operation === "-") {
-    result = numberOne - numberTwo;
-  } else if (operation === "*") {
-    result = numberOne * numberTwo;
-  } else if (operation === "/") {
-    result = numberOne / numberTwo;
-  } else if (operation === "%") {
-    result = numberOne / 100;
-  } else if (operation === "±") {
-    result = numberOne * -1;
-  } else {
-    result = 0;
-  }
-  printOnConsole(result);
+//   if (numberOne === true) {
+//     printOnConsole(text);
+//   } else if (numberTwo === true) {
+//     printOnConsole(text);
+//   } else {
+//     printOnConsole(0);
+//   }
+// }
+
+// function Calculate(operation, numberOne, numberTwo) {
+//   let result;
+//   if (operation === "+") {
+//     result = numberOne + numberTwo;
+//   } else if (operation === "-") {
+//     result = numberOne - numberTwo;
+//   } else if (operation === "*") {
+//     result = numberOne * numberTwo;
+//   } else if (operation === "/") {
+//     result = numberOne / numberTwo;
+//   } else if (operation === "%") {
+//     result = numberOne / 100;
+//   } else if (operation === "±") {
+//     result = numberOne * -1;
+//   } else {
+//     result = 0;
+//   }
+//   printOnConsole(result);
+// }
+
+function input(number, opr) {
+  array.push(number);
+  array.push(opr);
 }
-
 // console.log("Clicking", text);
 // numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 // return numbers.find((number) => number.index === text);
