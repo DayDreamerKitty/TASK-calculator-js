@@ -39,7 +39,16 @@ function input(text) {
 function calculate() {
   result = array[0];
   for (let i = 0; i < array.length; i++) {
-    if (array[i] === "+") result = result + array[i + 1];
+    if (array[i] === "+") {
+      result = result + array[i + 1];
+    } else if (array[i] === "-") {
+      result = result - array[i + 1];
+    } else if (array[i] === "÷") {
+      result = result / array[i + 1];
+    } else if (array[i] === "x") {
+      result = result * array[i + 1];
+    } else {
+    }
   }
   printOnConsole(result);
 }
